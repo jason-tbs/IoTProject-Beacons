@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Connect"
+        />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="Subscribe"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp" />
+
+    <Button
+        android:id="@+id/btnPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="5dp"
+        android:text="Publish"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp" />
+
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <EditText
+        android:id="@+id/messageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/btnLight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnSub"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-30dp"
+        android:layout_marginBottom="81dp"
+        android:text="Light 1"
+        android:enabled="false"
+        android:layout_alignLeft="@+id/btnSub"
+        android:layout_marginLeft="-30dp" />
+
+    <Button
+        android:id="@+id/btnLight2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="81dp"
+        android:text="Light 2"
+        android:enabled="false"
+        android:layout_marginLeft="100dp" />
+
+    <Button
+        android:id="@+id/btnLight3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="185dp"
+        android:layout_marginBottom="81dp"
+        android:text="Light 3"
+        android:enabled="false"
+        android:layout_marginLeft="185dp" />
+
+    <Button
+        android:id="@+id/btnAllLights"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/btnSub"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="231dp"
+        android:layout_marginBottom="80dp"
+        android:text="All lights"
+        android:enabled="false"
+        android:layout_alignLeft="@+id/btnSub"
+        android:layout_marginLeft="231dp" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/btnOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnSub"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="430dp"
+        android:text="OFF/ON"
+        android:layout_alignLeft="@+id/btnSub"
+        android:layout_marginLeft="1dp" />
+
+    <SeekBar
+        android:id="@+id/hueColor"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnLight1"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="195dp"
+        android:text="Color"
+        android:min="1"
+        android:max="65535"
+        android:layout_alignLeft="@+id/btnLight1" />
+
+    <SeekBar
+        android:id="@+id/hueSat"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnLight1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="165dp"
+        android:text="Saturation"
+        android:min="1"
+        android:max="254"
+        android:layout_alignLeft="@+id/btnLight1" />
+
+    <SeekBar
+        android:id="@+id/hueBri"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnLight1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="135dp"
+        android:text="Brightness"
+        android:min="1"
+        android:max="254"
+        android:layout_alignLeft="@+id/btnLight1" />
+
+    <TextView
+        android:id="@+id/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hueColor"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="215dp"
+        android:textSize="15dp"
+        android:layout_alignLeft="@+id/hueColor" />
+
+    <TextView
+        android:id="@+id/textBri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/hueBri"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:textSize="15dp"
+        android:layout_alignLeft="@id/hueBri" />
+
+    <TextView
+        android:id="@+id/textSat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/hueSat"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp"
+        android:textSize="15dp"
+        android:layout_alignLeft="@id/hueSat" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/btnLight1"
+        android:layout_alignParentBottom="true"
+        android:text="Back"
+        android:layout_alignLeft="@id/btnLight1" />
+
+    <Button
+        android:id="@+id/btnRef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/btnAllLights"/>
+</RelativeLayout>
